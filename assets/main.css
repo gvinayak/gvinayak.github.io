@@ -121,8 +121,9 @@ p {
   vertical-align: middle;
 }
 
-.sidebar-wrapper .contact-list .email .svg-inline--fa {
-  font-size: 18px;
+.sidebar-wrapper .contact-list .svg-inline--fa {
+  width: 20px;          /* fixed column width */
+  text-align: center;
 }
 
 /* ---------- GENERAL BLOCKS ---------- */
