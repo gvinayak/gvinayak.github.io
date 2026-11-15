@@ -5,64 +5,118 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="ML Researcher at LLNL">
-	<link rel="shortcut icon" type="image/x-icon" href="biohub.ico">  
+	<meta name="author" content="Vinayak Gupta">
+	<meta name="color-scheme" content="light dark">
+	<!-- Apply the saved theme before first paint so there's no light flash -->
+	<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+	<meta name="description" content="Vinayak Gupta — Chan Zuckerberg Biohub. AI for Science: multimodal foundation models for protein and genomic prediction.">
+	<link rel="canonical" href="https://gvinayak.github.io/">
+	<link rel="shortcut icon" type="image/x-icon" href="biohub.ico">
+
+	<!-- Social preview -->
+	<meta property="og:type" content="profile">
+	<meta property="og:title" content="Vinayak Gupta">
+	<meta property="og:description" content="Chan Zuckerberg Biohub. AI for Science: foundation models for protein and genomic prediction.">
+	<meta property="og:url" content="https://gvinayak.github.io/">
+	<meta property="og:image" content="https://gvinayak.github.io/assets/profile.jpg">
+	<meta name="twitter:card" content="summary">
 
 	<!-- Google Font -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-	<!-- Global CSS -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-	<!-- Theme CSS -->  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" type="text/css">
+	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/main.css">
-</head> 
+</head>
 
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="wrapper mt-lg-5">
 	<div class="sidebar-wrapper">
 		<!-- The content on the top right -->
 		<div class="profile-container">
 		    <a href="index.html">
-		        <img class="profile" src="assets/images/profile.png" alt="Vinayak Gupta" width="250" height="250"/>
+		        <img class="profile" src="assets/profile.webp" alt="Portrait of Vinayak Gupta" width="250" height="250" fetchpriority="high"/>
 		        <h1 class="name">Vinayak Gupta</h1>
 		    </a>
-		    <h3 class="tagline">Senior AI Researcher</h3>
-		    
+
 		    <div class="bio-logo-wrapper">
-		        <a href="https://biohub.org/"><img src="assets/images/biohub.png" alt="BioHub Logo" class="bio-logo"></a>
+		        <a href="https://biohub.org/" target="_blank" rel="noopener"><img src="assets/biohub.webp" alt="Chan Zuckerberg Biohub" class="bio-logo" loading="lazy"></a>
 		    </div>
 		</div>
-		<!-- 	 Links to all accounts -->
-		<div class="contact-container container-block">
+
+		<nav class="contact-container" aria-label="Contact and profiles">
 			<ul class="list-unstyled contact-list">
-				<li class="email"><a href="mailto: guptavinayak51 [AT] gmail.com"><i class="fas fa-envelope"></i>guptavinayak51 [AT] gmail.com</a></li>
-				<li class="website"><a href="https://scholar.google.com/citations?hl=en&user=tQuRm1AAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i>Google Scholar</a></li>
-				<li class="linkedin"><a href="https://www.linkedin.com/in/guptavinayak51" target="_blank"><i class="fab fa-linkedin-in"></i>LinkedIn Profile</a></li>
-				<li class="github"><a href="https://www.github.com/gvinayak" target="_blank"><i class="fab fa-github"></i>GitHub</a></li>
-				<li class="cv"><a href="assets/Vinayak_Gupta_PhD.pdf" target="_blank"><i class="fas fa-file-alt"></i>CV/Resume</a></li>
+				<li class="email"><svg class="svg-inline--fa fa-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg><a href="mailto:guptavinayak51@gmail.com">guptavinayak51@gmail.com</a></li>
+				<li class="website"><a href="https://scholar.google.com/citations?hl=en&amp;user=tQuRm1AAAAAJ" target="_blank" rel="noopener"><svg class="svg-inline--fa fa-graduation-cap" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"/></svg>Google Scholar</a></li>
+				<li class="linkedin"><a href="https://www.linkedin.com/in/guptavinayak51" target="_blank" rel="noopener"><svg class="svg-inline--fa fa-linkedin-in" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>LinkedIn Profile</a></li>
+				<li class="github"><a href="https://www.github.com/gvinayak" target="_blank" rel="noopener"><svg class="svg-inline--fa fa-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>GitHub</a></li>
+				<li class="cv"><a href="assets/Vinayak_Gupta_PhD.pdf" target="_blank" rel="noopener"><svg class="svg-inline--fa fa-file-alt" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"/></svg>CV</a></li>
 			</ul>
-		</div>
+		</nav>
 	</div>
 
-<div class="main-wrapper">
+<div class="main-wrapper" id="main">
 	<section class="section summary-section">
-		<h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>About Me</h2>
+		<h2 class="section-title"><span class="icon-holder"><svg class="svg-inline--fa fa-user" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></span>Hi there! <span class="title-aside">Just call me Vin.</span><button class="theme-switch" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark mode" title="Toggle dark mode"><span class="switch-knob"></span><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-13a1 1 0 0 1-1-1V1a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1Zm0 20a1 1 0 0 1-1-1v-2a1 1 0 0 1 2 0v2a1 1 0 0 1-1 1ZM4 13H2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm19 0h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2ZM5.64 7.05 4.22 5.64a1 1 0 0 1 1.42-1.42l1.41 1.42a1 1 0 0 1-1.41 1.41Zm12.72 12.72-1.41-1.41a1 1 0 0 1 1.41-1.41l1.42 1.41a1 1 0 0 1-1.42 1.41Zm0-12.72a1 1 0 0 1 0-1.41l1.42-1.42a1 1 0 0 1 1.41 1.42l-1.41 1.41a1 1 0 0 1-1.42 0ZM4.22 19.78a1 1 0 0 1 0-1.41l1.42-1.42a1 1 0 0 1 1.41 1.42l-1.41 1.41a1 1 0 0 1-1.42 0Z"/></svg><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.05 8.05 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.6 8.6 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Z"/></svg></button></h2>
 		<div class="summary">
-			<p align="justify"> I am a Senior AI Researcher at <a href="https://biohub.org/"><strong>Chan Zuckerberg Biohub</strong></a>. I work with members of the AI Engineering and <a href="https://www.evolutionaryscale.ai/">Evolutionary Scale</a> teams on designing efficient training pipelines for <strong>large scientific foundation models</strong>. Broadly, my research interests are in <strong>AI for Science</strong>, where I work on designing and training multimodal foundation models for protein and genomic prediction tasks. Earlier, I worked on methods for <strong>modeling medical data</strong> to advance drug discovery, EHR data modeling, medical time series, and medical Q&A agents.</p>
+			<p class="justify">I am a Senior AI Researcher at <a href="https://biohub.org/" target="_blank" rel="noopener" class="underline">Chan Zuckerberg Biohub</a>. I work with the AI Research and Engineering team on designing efficient training pipelines for large scientific foundation models. My research is in AI for Science, where I design and train multimodal foundation models for protein and genomic prediction tasks. Earlier, I worked on methods for modeling medical data to advance drug discovery, EHR data modeling, medical time series, and medical Q&amp;A agents.</p>
 
-			<p align="justify">Previously, I was a Researcher in the AI Research Group (AIRG) at <strong>Lawrence Livermore National Laboratory</strong>; a Postdoctoral Scholar at the <strong>Paul G. Allen School of Computer Science, University of Washington</strong>, where I worked with <a href="https://homes.cs.washington.edu/~althoff/"><strong>Tim Althoff</strong></a>; an AI Scientist at <strong>IBM Research</strong>; and also held positions as an Applied Scientist Intern at Amazon and an R&D Intern at Siemens. I have been the AI lead for several projects sponsored by the <strong>U.S. Department of Energy</strong>. My work has been featured in multiple media outlets, including <a href="https://developer.ibm.com/tutorials/awb-foundation-model-time-series-forecasting/", target="_blank"><strong>IBM blogs</strong></a>, and recognized as <a href="https://www.linkedin.com/posts/activity-7277244147206373380-Qguo/", target="_blank"><strong>"One of the biggest revelations of 2024"</strong></a>. I was IIT Delhi's nominee for the <strong>ACM SIGKDD and ACM Doctoral Dissertation Awards</strong>, featured on <a href="https://indiaai.gov.in/article/read-and-watch-lectures-to-build-a-foundation", target="_blank"><strong>IndiaAI</strong></a> by the Ministry of IT, Government of India, was a runner-up in <a href="https://indiaai.gov.in/research-reports/ai-gamechangers-2022-realizing-india-s-ai-promise", target="_blank"><strong>NASSCOM's AI Gamechangers of India</strong></a>, and received the <a href="https://www.aimlsystems.org/2021/", target="_blank"><strong>Outstanding Doctoral Paper</strong></a> Award at the conference on AI-ML Systems.</p> 
+			<p class="justify">Previously, I was an AI Researcher at Lawrence Livermore National Laboratory (LLNL); a Postdoctoral Scholar at the Paul G. Allen School of Computer Science, University of Washington, where I worked with <a href="https://behavioral-data.github.io/" target="_blank" rel="noopener" class="underline">Tim Althoff</a>; and an AI Scientist at IBM Research. I have also held positions as an Applied Scientist Intern at Amazon and an R&amp;D Intern at Siemens Healthcare. I have led the AI efforts on projects sponsored by the U.S. DOE, NIH, and NSF, and my work has been featured in <a href="https://developer.ibm.com/tutorials/awb-foundation-model-time-series-forecasting/" target="_blank" rel="noopener" class="underline">IBM blogs</a>, recognized as a runner-up in NASSCOM's AI Gamechangers 2022, and nominated for several doctoral dissertation awards. One of my papers was highlighted by an AI influencer as <a href="https://www.linkedin.com/posts/activity-7277244147206373380-Qguo/" target="_blank" rel="noopener" class="underline"><i>"one of the biggest revelations of 2024"</i></a>. A full list of my publications is available on my <a href="https://scholar.google.com/citations?hl=en&amp;user=tQuRm1AAAAAJ" target="_blank" rel="noopener" class="underline">Google Scholar</a> profile.</p>
+			<details class="real-about">
+			
+			<summary>Still Curious?</summary>
+			<p class="justify">Wow, you're still reading? Okay then, here's some more cool stuff about me. I grew up in New Delhi (it's just beautiful) and went to school at Delhi Public School (yes, that one!) and Cambridge School. Before I started chasing degrees and papers for no particular reason, I was the guitarist in my college rock band, a member of the counselling committee (I never actually did anything), and an organizer of many unsung fests and clubs (even I've forgotten their names).</p>
 
-			<p>A full list of my publications is available on my <a href="https://scholar.google.com/citations?hl=en&user=tQuRm1AAAAAJ"><strong>Google Scholar</strong></a> profile.</p>
+			<p class="justify">I also bake, and I'm pretty good at it. Not cakes, though: think kebabs, tandoori chicken, cordon bleu, börek, and the like. When I'm not pretending to work, you'll find me out and about in the beautiful Bay Area: swimming, playing tennis (or pickleball, if the courts are taken), and hiking (just not the long ones).</p>
+
+			<p class="justify">My actual job these days is to stay out of the way of a team doing research on all sorts of machine learning, from world models for cellular biology to large-scale foundation model training runs.</p>
+			</details>
 		</div>
 	</section>
-	
+
 </div>
 </div>
-	<!-- <footer class="footer">
+
+<footer class="footer">
 		<div class="text-center">
-			<small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers.</small>
+			<small class="copyright">Feel free to reach out about anything. Built with <svg class="svg-inline--fa fa-heart" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg> by a very patient AI.</small>
 		</div>
-	</footer> -->
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vinayak Gupta",
+  "url": "https://gvinayak.github.io/",
+  "image": "https://gvinayak.github.io/assets/profile.jpg",
+  "worksFor": { "@type": "Organization", "name": "Chan Zuckerberg Biohub", "url": "https://biohub.org/" },
+  "sameAs": [
+    "https://scholar.google.com/citations?hl=en&user=tQuRm1AAAAAJ",
+    "https://www.linkedin.com/in/guptavinayak51",
+    "https://www.github.com/gvinayak"
+  ]
+}
+</script>
+
+<script>
+(function () {
+	var btn = document.getElementById('theme-toggle');
+	if (document.documentElement.getAttribute('data-theme') === 'dark') {
+		btn.setAttribute('aria-checked', 'true');
+	}
+	btn.addEventListener('click', function () {
+		var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+		if (dark) {
+			document.documentElement.removeAttribute('data-theme');
+		} else {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+		btn.setAttribute('aria-checked', dark ? 'false' : 'true');
+		try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
+	});
+})();
+</script>
 </body>
 </html>

@@ -1,110 +1,151 @@
-/*! 
- * Template Name: Orbit - Bootstrap 5 Resume/CV Template for Developers
- * Version: Bootstrap 5 v1.0
- * Author: Xiaoying Riley
- * Copyright: 3rd Wave Media
- * Twitter: @3rdwave_themes
- * Website: http://themes.3rdwavemedia.com/
-*/
+/*!
+ * Based on: Orbit - Bootstrap 5 Resume/CV Template for Developers
+ * Author: Xiaoying Riley, 3rd Wave Media (http://themes.3rdwavemedia.com/)
+ */
+
+/* ---------- BASE ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: no-preference) { :root { scroll-behavior: smooth; } }
+
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  /*color: #545E6C;*/
+  font-size: 16px;
+  line-height: 1.5;
   color: #1a1d23;
   background: #f5f5f5;
-  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-}
+h1, h2 { margin-top: 0; margin-bottom: 0.5rem; line-height: 1.2; font-weight: 400; }
+p, ul { margin-top: 0; margin-bottom: 1rem; }
+small { font-size: 0.875em; }
+img, svg { vertical-align: middle; }
+button { margin: 0; font-family: inherit; font-size: inherit; text-transform: none; cursor: pointer; }
+summary { display: list-item; cursor: pointer; }
 
 a {
   color: #1a1d23;
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
   color: #10171a;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  text-decoration: underline;
+  transition: all 0.4s ease-in-out;
 }
-
 a:focus {
   text-decoration: none;
 }
 
-p {
-  line-height: 1.5;
+/* Utility classes used in index.html */
+.list-unstyled { padding-left: 0; list-style: none; }
+.text-center { text-align: center; }
+@media (min-width: 992px) { .mt-lg-5 { margin-top: 3rem !important; } } /* must beat .wrapper's margin */
+
+/* Inline SVG icons */
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
 }
+.svg-inline--fa.fa-graduation-cap { width: 1.25em; }
+.svg-inline--fa.fa-linkedin-in,
+.svg-inline--fa.fa-user { width: 0.875em; }
+.svg-inline--fa.fa-file-alt { width: 0.75em; }
+
+/* ---------- LAYOUT ---------- */
+/* Stacked on phones; side by side (sidebar on the right) from 768px up,
+   with both columns stretched to the taller one. */
 
 .wrapper {
-  background: #1a1d23;
   max-width: 1000px;
   margin: 0 auto;
-  position: relative;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background: #1a1d23;
+  border-radius: 14px;
+  overflow: hidden; /* clip the panels to the rounded corners */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
 
 .sidebar-wrapper {
   background: #1a1d23;
-  position: absolute;
-  right: 0;
-  width: 320px;
-  height: auto;          /* prevent forced extra height */
-  min-height: unset;    /* remove blank space */
   color: #fff;
 }
+
+.main-wrapper {
+  background: #fff;
+  padding: 30px 30px 25px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .sidebar-wrapper {
+    flex: 0 0 320px;
+  }
+  .main-wrapper {
+    flex: 1 1 auto;
+    padding: 50px 50px 25px;
+  }
+}
+
+/* ---------- SIDEBAR ---------- */
 
 .sidebar-wrapper a {
   color: #fff;
 }
 
-/* ---------- PROFILE SECTION ---------- */
-
 .sidebar-wrapper .profile-container {
-  padding: 30px 30px 20px; /* tighter bottom */
+  padding: 30px 30px 10px;
   background: rgba(0, 0, 0, 0.05);
   text-align: center;
-  color: #fff;
 }
 
 .sidebar-wrapper .profile {
-  margin-bottom: 5px; /* tighten image → name */
+  margin-bottom: 5px;
 }
 
 .sidebar-wrapper .name {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 0 4px;
 }
 
-.sidebar-wrapper .tagline {
-  color: rgba(255, 255, 255);
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0 0 6px; /* tighten tagline → logo */
-}
-
 .bio-logo-wrapper {
-  padding-top: 5px;
+  padding-top: 14px; /* gap between name and logo */
 }
 
 .sidebar-wrapper .bio-logo {
-  max-width: 180px;
+  display: block; /* no stray line-height gap under the logo */
+  max-width: 150px;
   height: auto;
-  margin-top: 5px;
+  margin: 0 auto;
 }
 
-/* ---------- CONTACT LIST ---------- */
-
 .sidebar-wrapper .contact-container {
-  padding: 20px 30px 15px; /* tighter top */
+  padding: 12px 30px 20px;
+}
+
+/* Hairline divider above the contact links, fading out at both ends */
+.sidebar-wrapper .contact-container::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 80%;
+  margin: 0 auto 16px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .sidebar-wrapper .contact-list li {
@@ -116,220 +157,260 @@ p {
 }
 
 .sidebar-wrapper .contact-list .svg-inline--fa {
+  width: 20px; /* fixed icon column */
   margin-right: 10px;
   font-size: 18px;
   vertical-align: middle;
 }
 
-.sidebar-wrapper .contact-list .svg-inline--fa {
-  width: 20px;          /* fixed column width */
-  text-align: center;
-}
+/* ---------- MAIN COLUMN ---------- */
 
-/* ---------- GENERAL BLOCKS ---------- */
-
-.sidebar-wrapper .container-block {
-  padding: 20px 30px;
-}
-
-.sidebar-wrapper .container-block-title {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: -30px;
-  margin-bottom: 5px;
-}
-
-/* ---------- EDUCATION / LISTS ---------- */
-
-.sidebar-wrapper .degree {
-  font-size: 16px;
-  margin: 0 0 5px;
-}
-
-.sidebar-wrapper .education-container .item {
-  margin-bottom: 8px;
-}
-
-.sidebar-wrapper .education-container .item:last-child {
-  margin-bottom: 0;
-}
-
-.sidebar-wrapper .education-container .meta,
-.sidebar-wrapper .education-container .time {
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  margin: 0;
-  font-size: 16px;
-}
-
-.sidebar-wrapper .languages-container .lang-desc {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.sidebar-wrapper .languages-list li,
-.sidebar-wrapper .interests-list li {
-  margin-bottom: 8px;
-}
-
-.sidebar-wrapper .languages-list li:last-child,
-.sidebar-wrapper .interests-list li:last-child {
-  margin-bottom: 0;
-}
-
-.main-wrapper {
-  background: #fff;
-  padding: 50px;
-  padding-right: 350px;
-  /*padding-bottom: -0px;*/
-}
 .main-wrapper .section-title {
-/*  text-transform: uppercase;*/
+  position: relative;
+  margin-bottom: 14px;
   font-size: 20px;
   font-weight: 500;
   color: #1a1d23;
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0;
 }
+
 .main-wrapper .section-title .icon-holder {
+  position: relative;
+  top: -2px;
+  display: inline-block;
   width: 30px;
   height: 30px;
   margin-right: 8px;
-  display: inline-block;
-  color: #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   background: #1a1d23;
+  color: #fff;
   text-align: center;
   font-size: 16px;
-  position: relative;
-  top: -2px;
 }
+
 .main-wrapper .section-title .icon-holder .svg-inline--fa {
   font-size: 15px;
   margin-top: 6px;
 }
+
+.main-wrapper .section-title .title-aside {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+
 .main-wrapper .section {
   margin-bottom: 18px;
 }
-.main-wrapper .experiences-section .item {
-  margin-bottom: 30px;
-}
-.main-wrapper .upper-row {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2px;
-}
-.main-wrapper .job-title {
-  color: #fff;
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 2px;
-  font-weight: 500;
-}
-.main-wrapper .time {
-  position: absolute;
-  right: 0;
-  top: 0;
-  /*color: #97AAC3;*/
-  color: #1a1d23;
-}
-.main-wrapper .company {
-  margin-bottom: 5px;
-  /*color: #97AAC3;*/
-  color: #1a1d23;
-}
-.main-wrapper .project-title {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.main-wrapper .projects-section .intro {
-  margin-bottom: 30px;
-}
-.main-wrapper .projects-section .item {
-  margin-bottom: 15px;
+
+.main-wrapper .section:last-child,
+.main-wrapper .summary p:last-child {
+  margin-bottom: 0;
 }
 
-.main-wrapper .publication-conference {
-  color: #2e4049;
+.main-wrapper .summary a.underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-.main-wrapper .publication-content {
-  margin-bottom: 10px;
+p.justify {
+  text-align: justify;
 }
 
-.skillset .item {
-  margin-bottom: 15px;
-  overflow: hidden;
+/* Collapsible "The Real Bio!" box */
+.main-wrapper .summary .real-about {
+  margin-top: 20px;
+  padding: 10px 14px;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  background: #fafafa;
 }
-.skillset .level-title {
-  font-size: 15px;
-  margin-top: 0;
-  margin-bottom: 12px;
+
+.main-wrapper .summary .real-about summary {
+  font-size: 14px;
+  font-weight: 700;
+  list-style: none;
 }
-.skillset .level-bar {
-  height: 12px;
-  background: #f5f5f5;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+
+.main-wrapper .summary .real-about summary::-webkit-details-marker {
+  display: none;
 }
-.skillset .theme-progress-bar {
-  background: #5f8697;
+
+.main-wrapper .summary .real-about summary::before {
+  content: "\25B8"; /* right-pointing triangle */
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
 }
+
+.main-wrapper .summary .real-about[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.main-wrapper .summary .real-about p {
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+/* ---------- FOOTER ---------- */
 
 .footer {
   padding: 30px;
-  padding-top: 30px;
 }
+
 .footer .copyright {
   line-height: 1.6;
   color: #1a1d23;
   font-size: 13px;
 }
+
 .footer .fa-heart {
   color: #fb866a;
 }
 
-@media (max-width: 767.98px) {
-  .sidebar-wrapper {
-    position: static;
-    width: inherit;
-  }
+/* ---------- ACCESSIBILITY ---------- */
 
-  .main-wrapper {
-    padding: 30px;
-  }
+/* Keyboard focus ring (a:focus above removes the default) */
+a:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid #1a1d23;
+  outline-offset: 2px;
+}
 
-  .main-wrapper .time {
-    position: static;
-    display: block;
-    margin-top: 5px;
-  }
+/* Skip-to-content link, visible only when focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 16px;
+  background: #fff;
+  color: #1a1d23;
+}
+.skip-link:focus {
+  left: 0;
+}
 
-  .main-wrapper .upper-row {
-    margin-bottom: 0;
+/* ---------- THEME SWITCH ---------- */
+/* Sliding pill: sun on the left, moon on the right; the knob slides under
+   whichever icon is active. */
+
+.theme-switch {
+  float: right;
+  position: relative;
+  width: 46px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(26, 29, 35, 0.15);
+  border-radius: 12px;
+  background: #e6e8ec;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.theme-switch .switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+}
+
+.theme-switch svg {
+  position: absolute;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  fill: #1a1d23;
+  opacity: 0.45;
+  transition: opacity 0.25s ease;
+}
+
+.theme-switch .icon-sun {
+  left: 5px;
+  opacity: 1;
+}
+
+.theme-switch .icon-moon {
+  right: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-switch .switch-knob,
+  .theme-switch svg {
+    transition: none;
   }
 }
-@media (min-width: 992px) {
-  .skillset .level-title {
-    display: inline-block;
-    float: left;
-    width: 30%;
-    margin-bottom: 0;
-  }
+
+/* ---------- DARK MODE ---------- */
+/* Opt-in via the toggle (data-theme="dark" on <html>). */
+
+html[data-theme="dark"] body {
+  background: #0f1113;
+  color: #e6e8eb;
+}
+
+html[data-theme="dark"] a,
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] .main-wrapper .section-title,
+html[data-theme="dark"] .footer .copyright {
+  color: #e6e8eb;
+}
+
+html[data-theme="dark"] .wrapper {
+  background: #15181c;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="dark"] .sidebar-wrapper {
+  background: #15181c;
+}
+
+html[data-theme="dark"] .sidebar-wrapper .profile-container {
+  background: transparent;
+}
+
+html[data-theme="dark"] .main-wrapper {
+  background: #23272d;
+}
+
+html[data-theme="dark"] .main-wrapper .section-title .icon-holder {
+  background: #3a4149;
+}
+
+html[data-theme="dark"] .main-wrapper .summary .real-about {
+  background: #1b1f24;
+  border-color: #343a41;
+}
+
+html[data-theme="dark"] .theme-switch {
+  background: #3a4149;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme="dark"] .theme-switch .switch-knob {
+  background: #15181c;
+  transform: translateX(22px);
+}
+
+html[data-theme="dark"] .theme-switch svg {
+  fill: #e6e8eb;
+  opacity: 0.45;
+}
+
+html[data-theme="dark"] .theme-switch .icon-moon {
+  opacity: 1;
+}
+
+html[data-theme="dark"] a:focus-visible,
+html[data-theme="dark"] .skip-link:focus-visible {
+  outline-color: #e6e8eb;
+}
+
+html[data-theme="dark"] .skip-link {
+  background: #23272d;
+  color: #e6e8eb;
 }
