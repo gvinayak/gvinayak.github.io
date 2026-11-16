@@ -216,7 +216,12 @@ p.justify {
   text-align: justify;
 }
 
-/* Collapsible "The Real Bio!" box */
+/* Key phrase: medium weight, a step up from body text */
+.hl {
+  font-weight: 500;
+}
+
+/* Collapsible "Still Curious?" box */
 .main-wrapper .summary .real-about {
   margin-top: 20px;
   padding: 10px 14px;
